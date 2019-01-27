@@ -25,7 +25,8 @@ app.use((req, res, next) => {
 
 app.use(Routes);
 
-mongoose.connect('mongodb://localhost:27017/elesedb', (err, res) => {
+
+mongoose.connect(process.env.URLDB, (err, res) => {
     if (err) throw err;
 
     console.log("Database online");
@@ -34,5 +35,5 @@ mongoose.connect('mongodb://localhost:27017/elesedb', (err, res) => {
 
 
 app.listen(process.env.PORT, (res, req) => {
-    console.log(`Listening port 3000 ${process.env.PORT}`);
+    console.log(`Listening port  ${process.env.PORT}`);
 });
