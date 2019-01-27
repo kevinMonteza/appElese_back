@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+require('./config/config');
 
 
 const Routes = require('../routes/router');
@@ -32,6 +33,6 @@ mongoose.connect('mongodb://localhost:27017/elesedb', (err, res) => {
 
 
 
-app.listen(3000, (res, req) => {
-    console.log("Listening port 3000");
+app.listen(process.env.PORT, (res, req) => {
+    console.log(`Listening port 3000 ${process.env.PORT}`);
 });
