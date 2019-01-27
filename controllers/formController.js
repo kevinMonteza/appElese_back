@@ -122,7 +122,11 @@ exports.destroyFormPersona = ((req, res) => {
 
 // controladores para empresa
 exports.getFormEmpresa = ((req, res) => {
+    let desde = Number(req.query.desde) || 0;
+    let limite = Number(req.query.limite) || 6;
     formEmpresa.find({estado: true})
+        .skip(desde)
+        .limit(limite)
         .exec((err, formDB) => {
             if (err) {
                 return res.status(400).json({
@@ -131,10 +135,12 @@ exports.getFormEmpresa = ((req, res) => {
                 });
             }
             formEmpresa.count({estado: true}, (err, cont) => {
+                let pag = cont/limite;
                 res.json({
                     ok: true,
                     formDB,
-                    cont
+                    cont,
+                    pag
                 })
             })
 
