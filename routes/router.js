@@ -9,7 +9,7 @@ router.get('/persona',formController.getFormPersona);
 //router.post('/persona', formController.saveFormPersona);
 router.get('/woo', function(req,res){
     console.log(req.body)
-    res.json({"products":[ 
+    res.json([ 
         {
             ProductId:"1",
             ProductName:"asus",
@@ -47,7 +47,7 @@ router.get('/woo', function(req,res){
                 CategoryId:'1',
                 CategoryName:"Laptops"}
                
-    ]})
+    ])
     // res.json({
     //     ProductId:"4",
     //     ProductName:"dell",
@@ -64,4 +64,47 @@ router.post('/empresa', formController.saveFormEmpresa);
 router.put('/empresa/:id', formController.updateFormEmpresa);
 router.delete('/empresa/:id', formController.destroyFormEmpresa);
 
-module.exports = router;
+module.exports = router;   
+
+
+// console.log('start js .0');
+// var doms = document.getElementsByClassName('woocommerce-LoopProduct-link');
+// console.log(doms);
+//     for (var i in doms) {
+//         console.log(i);
+//         doms[i].addEventListener('click', function () {
+//          console.log("en el evento");
+//             fetch('https://appeleseserver.herokuapp.com'
+//                 {
+//                     headers: {
+//                         'Accept': 'application/json',
+//                         'Content-Type': 'application/json',
+//                         'Access-Control-Allow-Origin': ['*'],
+//                         'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'                   
+//                     },
+//                     method: "get",
+//                     body: JSON.stringify({ a: 1, b: 2 })
+//                 })
+//             .then(res => { return res.json() })
+//             .then(json => { console.log(data) })
+
+//     }, false);
+// }
+   
+
+  
+    
+})
+
+
+
+
+doms.forEach(function(element){
+    console.log(element);
+    element.addEventListener('click', function () {
+     console.log("en el evento");
+        fetch('https://appeleseserver.com/woo')
+            .then(res => { return res.json() })
+            .then(json => { console.log(data) })
+}); 
+           
