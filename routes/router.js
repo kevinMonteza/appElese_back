@@ -40,7 +40,7 @@ router.get('/woo', function(req,res){
             ProductUrl:"http://woo.prodequa.com/product/2017-acer-flagship-cb3-532-15-6-hd-premium-chromebook-intel-celeron-dual-core-n3060-hasta-2-48-ghz-2-gb-de-ram-16-gb-ssd-wireless-ac-bluetooth-hdmi-usb-3-0-camara-web-cro/",
             CategoryId:'1',
             CategoryName:"Laptops" },
-            ,{
+        ,{
                 ProductId:"6",
                 ProductName:"Asus",
                 ProductUrl:"http://woo.prodequa.com/product/2017-acer-flagship-cb3-532-15-6-hd-premium-chromebook-intel-celeron-dual-core-n3060-hasta-2-48-ghz-2-gb-de-ram-16-gb-ssd-wireless-ac-bluetooth-hdmi-usb-3-0-camara-web-cro/",
@@ -94,17 +94,17 @@ module.exports = router;
 
   
     
-})
+// })
 
 
 
 
-doms.forEach(function(element){
-    console.log(element);
-    element.addEventListener('click', function () {
-     console.log("en el evento");
-        fetch('https://appeleseserver.com/woo')
-            .then(res => { return res.json() })
-            .then(json => { console.log(data) })
-}); 
+// doms.forEach(function(element){
+//     console.log(element);
+//     element.addEventListener('click', function () {
+//      console.log("en el evento");
+//         fetch('https://appeleseserver.com/woo')
+//             .then(res => { return res.json() })
+//             .then(json => { console.log(data) })
+// }); 
            
