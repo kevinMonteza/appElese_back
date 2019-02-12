@@ -45,13 +45,13 @@ router.get('/woo', function(req,res){
             ProductImageUrl: "http://woo.prodequa.com/wp-content/uploads/2019/02/hp2.jpg",
             CategoryId:'1',
             CategoryName:"Laptops" },
-            ,{
-                ProductId:"6",
-                ProductName:"Asus",
-                ProductUrl:"http://woo.prodequa.com/product/2017-acer-flagship-cb3-532-15-6-hd-premium-chromebook-intel-celeron-dual-core-n3060-hasta-2-48-ghz-2-gb-de-ram-16-gb-ssd-wireless-ac-bluetooth-hdmi-usb-3-0-camara-web-cro/",
-                ProductImageUrl: "http://woo.prodequa.com/wp-content/uploads/2019/02/dell.jpg",
-                CategoryId:'1',
-                CategoryName:"Laptops"}
+        {
+            ProductId:"6",
+            ProductName:"Asus",
+            ProductUrl:"http://woo.prodequa.com/product/2017-acer-flagship-cb3-532-15-6-hd-premium-chromebook-intel-celeron-dual-core-n3060-hasta-2-48-ghz-2-gb-de-ram-16-gb-ssd-wireless-ac-bluetooth-hdmi-usb-3-0-camara-web-cro/",
+            ProductImageUrl: "http://woo.prodequa.com/wp-content/uploads/2019/02/dell.jpg",
+            CategoryId:'1',
+            CategoryName:"Laptops"}
                
     ]})
     // res.json({
